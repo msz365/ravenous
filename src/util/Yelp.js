@@ -22,10 +22,10 @@ response => {
   },
 
 search(term,location,sortBy){
-return Yelp.getAccessToken().then(function =>{
+return Yelp.getAccessToken().then( ()=>{
 
   fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, {
-     headers: { .Authorization=`Bearer ${accessToken}` }
+     headers: { Authorization:`Bearer ${accessToken}` }
 
   }).then(
 response => {
@@ -51,7 +51,7 @@ console.log(networkError.message);
   reviewCount:business.review_count
 }
 
-  ););
+  ));
 }})
 
 

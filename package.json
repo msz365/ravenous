@@ -11,13 +11,14 @@
   "scripts": {
     "start": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
-    "build": "babel src -d lib",
+      "build": "babel source --presets babel-preset-es2015 --out-dir lib",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "cli": "^1.0.1"
   }
 }
